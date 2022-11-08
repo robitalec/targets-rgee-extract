@@ -12,6 +12,11 @@
       }
     ]
   },
+  "Python": {
+    "Version": "3.9.2",
+    "Type": "virtualenv",
+    "Name": "/home/alecr/.virtualenvs/rgee"
+  },
   "Packages": {
     "DBI": {
       "Package": "DBI",
