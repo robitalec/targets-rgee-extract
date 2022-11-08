@@ -30,6 +30,10 @@ points_csv_sf <- st_as_sf(points_csv, coords = c('X', 'Y'))
 
 
 
+# Images
+world_settlement_footprint_asset_id <- 'DLR/WSF/WSF2015/v1'
+
+
 
 # Targets: setup ----------------------------------------------------------
 targets_setup <- c(
@@ -46,7 +50,7 @@ targets_setup <- c(
 targets_images <- c(
 	tar_target(
 		world_settlement_footprint,
-		ee$Image('')
+		get_ee_image(world_settlement_footprint_asset_id)
 	)
 )
 
