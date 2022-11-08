@@ -8,7 +8,6 @@ targets::tar_source('R')
 
 
 
-
 # Variables ---------------------------------------------------------------
 x_mid <- -68.3559
 y_mid <- 49.4672
@@ -38,8 +37,6 @@ points_csv_sf <- st_as_sf(points_csv, coords = c('X', 'Y'))
 
 
 
-# Images
-world_settlement_footprint_asset_id <- 'DLR/WSF/WSF2015/v1'
 
 
 
@@ -50,7 +47,6 @@ targets_setup <- c(
 		get_example_points(x_mid, y_mid, buffer_dist, n_pts)
 	)
 )
-
 
 
 
@@ -71,5 +67,3 @@ targets_images <- c(
 # Targets: all ------------------------------------------------------------
 # Automatically grab all the 'targets_*' lists above
 lapply(grep('targets', ls(), value = TRUE), get)
-
-
