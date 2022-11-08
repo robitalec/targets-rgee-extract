@@ -14,8 +14,8 @@ output: github_document
 
 Install:
 
-- https://r-spatial.github.io/rgee/articles/rgee01.html#installation
-
+- `rgee` (https://r-spatial.github.io/rgee/articles/rgee01.html#installation)
+- gcloud (https://cloud.google.com/sdk/docs/install)
 
 ```{r, eval = FALSE}
 library(rgee)
