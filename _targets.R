@@ -65,7 +65,7 @@ targets_extract <- c(
 	tar_target(
 		extract_world_settlement_footprint,
 		ee_extract(
-			world_settlement_footprint_asset_id,
+			world_settlement_footprint,
 			points,
 			scale = world_settlement_footprint_scale,
 			fun = reducer_mean
