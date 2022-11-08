@@ -4,3 +4,22 @@ output: github_document
 
 
 # targets-rgee-extract
+
+
+
+## Setup
+
+
+### `rgee` 
+
+Install:
+
+- https://r-spatial.github.io/rgee/articles/rgee01.html#installation
+
+
+```{r, eval = FALSE}
+library(rgee)
+ee_install(py_env = 'rgee')
+```
+
+
