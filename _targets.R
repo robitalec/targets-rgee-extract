@@ -16,6 +16,14 @@ buffer_dist <- 1e5
 n_pts <- 100
 
 
+# Images
+world_settlement_footprint_asset_id <- 'DLR/WSF/WSF2015/v1'
+world_settlement_footprint_asset_scale <- 10
+
+# Reducers
+reducer_mean <- ee$Reducer$mean()
+
+
 # Data --------------------------------------------------------------------
 # There are a number of ways one might end up with a dataset of locations
 #   to extract through rgee / Earth Engine
