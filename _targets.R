@@ -9,8 +9,8 @@ targets::tar_source('R')
 
 
 # Variables ---------------------------------------------------------------
-x_mid <- -68.3559
-y_mid <- 49.4672
+x_mid <- -73.7465
+y_mid <- 45.4693
 buffer_dist <- 1e5
 n_pts <- 100
 
@@ -54,7 +54,7 @@ targets_setup <- c(
 targets_images <- c(
 	tar_target(
 		world_settlement_footprint,
-		get_ee_image(world_settlement_footprint_asset_id)
+		1
 	)
 )
 
@@ -65,10 +65,11 @@ targets_extract <- c(
 	tar_target(
 		extract_world_settlement_footprint,
 		ee_extract(
-			world_settlement_footprint,
+			get_ee_image(world_settlement_footprint_asset_id),
 			points,
 			scale = world_settlement_footprint_scale,
-			fun = reducer_mean
+			fun = reducer_mean,
+			sf = TRUE
 		)
 	)
 )
