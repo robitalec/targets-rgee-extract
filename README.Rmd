@@ -9,6 +9,16 @@ output: github_document
 
 ## Setup
 
+First time
+
+```{r, eval = FALSE}
+renv::restore()
+rgee::ee_Authenticate()
+```
+
+## System dependencies
+
+- gcloud
 
 ### `rgee` 
 
