@@ -15,11 +15,14 @@ targets::tar_source('R')
 
 
 # Data --------------------------------------------------------------------
-x_mid <- -68.3559
-y_mix <- 49.4672
+get_fake_points <- function(x, y, buffer_size) {
+	xy_pt <- st_point(c(-68.3559, 49.4672))
+	xy_df <- data.frame(id = 'mid')
+	xy_df$geom <- st_sfc(xy_pt)
+	xy_sf <- st_as_sf(xy_df, crs = 4326)
+	xy_buff <- st_buffer(xy_sf, 100)
 
-
-
+}
 
 # Targets: setup ----------------------------------------------------------
 targets_setup <- c(
