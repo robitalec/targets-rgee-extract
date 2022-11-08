@@ -5,7 +5,7 @@ get_example_points <- function(x, y, buffer_size, n_pts) {
 	xy_df <- data.frame(id = 'mid')
 	xy_df$geom <- st_sfc(xy_pt)
 	xy_sf <- st_as_sf(xy_df, crs = 4326)
-	xy_buff <- st_buffer(xy_sf, 100)
+	xy_buff <- st_buffer(xy_sf, buffer_size)
 
 	xy_sample <- st_sample(xy_buff, n_pts)
 	out_sf <- st_as_sf(xy_sample)
