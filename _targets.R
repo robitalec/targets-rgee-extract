@@ -60,7 +60,18 @@ targets_images <- c(
 
 
 
-
+# Targets: extract --------------------------------------------------------
+targets_extract <- c(
+	tar_target(
+		extract_world_settlement_footprint,
+		ee_extract(
+			points,
+			world_settlement_footprint_asset_id,
+			scale = world_settlement_footprint_scale,
+			fun = reducer_mean
+		)
+	)
+)
 
 
 
