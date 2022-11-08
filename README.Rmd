@@ -4,3 +4,42 @@ output: github_document
 
 
 # targets-rgee-extract
+
+
+
+## Setup
+
+
+### `rgee` 
+
+Install:
+
+- `rgee` (https://r-spatial.github.io/rgee/articles/rgee01.html#installation)
+- gcloud (https://cloud.google.com/sdk/docs/install)
+
+```{r, eval = FALSE}
+library(rgee)
+ee_install(py_env = 'rgee')
+```
+
+
+Authenticate:
+
+```{r, eval = FALSE}
+ee_Initialize()
+```
+
+
+Check:
+
+```{r, eval = FALSE}
+ee_check()
+```
+
+
+Renv + python:
+
+```{r, eval = FALSE}
+renv::use_python(reticulate::py_discover_config()$python)
+renv::snapshot()
+```
