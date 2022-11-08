@@ -23,6 +23,7 @@ n_pts <- 100
 
 # 1) Load data files eg. a CSV of points
 points_csv <- fread('data/example-points.csv')
+points_csv_sf <- st_as_sf(points_csv, coords = c('X', 'Y'))
 
 # 2) Points originating from some other function
 # (See targets_setup/points in buffer)
@@ -33,7 +34,7 @@ points_csv <- fread('data/example-points.csv')
 # Targets: setup ----------------------------------------------------------
 targets_setup <- c(
 	tar_target(
-		points_in_buffer,
+		points,
 		get_example_points(x_mid, y_mid, buffer_dist, n_pts)
 	)
 )
