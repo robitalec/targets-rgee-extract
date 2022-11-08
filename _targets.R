@@ -50,16 +50,6 @@ targets_setup <- c(
 
 
 
-# Targets: images ---------------------------------------------------------
-targets_images <- c(
-	tar_target(
-		world_settlement_footprint,
-		1
-	)
-)
-
-
-
 # Targets: extract --------------------------------------------------------
 targets_extract <- c(
 	tar_target(
