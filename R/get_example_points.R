@@ -1,5 +1,7 @@
 #' Get example points in a region
-#'
+#' @return
+#' @author Alec L. Robitaille
+#' @export
 get_example_points <- function(x, y, buffer_size, n_pts) {
 	xy_pt <- st_point(c(x, y))
 	xy_df <- data.frame(id = 'mid')
