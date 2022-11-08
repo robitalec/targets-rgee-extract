@@ -13,7 +13,7 @@ targets::tar_source('R')
 x_mid <- -68.3559
 y_mid <- 49.4672
 buffer_dist <- 5e3
-
+n_pts <- 1e3
 
 
 # Data --------------------------------------------------------------------
@@ -28,7 +28,10 @@ get_fake_points <- function(x, y, buffer_size) {
 
 # Targets: setup ----------------------------------------------------------
 targets_setup <- c(
-
+	tar_target(
+		points_in_buffer,
+		get_example_points(x_mid, y_mid, buffer_dist, n_pts)
+	)
 )
 
 
