@@ -62,6 +62,8 @@ targets_extract <- c(
 			sf = TRUE
 		)
 	)
+
+	# TODO: map over images in a collection
 )
 
 
