@@ -23,8 +23,17 @@ ee_install(py_env = 'rgee')
 ```
 
 
-Authenticate
+Authenticate:
 
 ```{r, eval = FALSE}
 ee_Initialize()
 ```
+
+
+Check:
+
+```{r, eval = FALSE}
+ee_check()
+```
+
+
