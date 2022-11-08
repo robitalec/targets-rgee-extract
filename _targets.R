@@ -42,11 +42,16 @@ targets_setup <- c(
 
 
 
-
-# Targets: extract --------------------------------------------------------
-targets_extract <- c(
-
+# Targets: images ---------------------------------------------------------
+targets_images <- c(
+	tar_target(
+		world_settlement_footprint,
+		ee$Image('')
+	)
 )
+
+
+
 
 
 
