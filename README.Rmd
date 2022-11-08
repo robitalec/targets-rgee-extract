@@ -37,3 +37,8 @@ ee_check()
 ```
 
 
+Renv + python:
+
+```{r, eval = FALSE}
+renv::use_python(reticulate::py_discover_config()$python)
+```
