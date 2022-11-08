@@ -17,7 +17,7 @@ n_pts <- 100
 
 # Images
 world_settlement_footprint_asset_id <- 'DLR/WSF/WSF2015/v1'
-world_settlement_footprint_asset_scale <- 10
+world_settlement_footprint_scale <- 10
 
 # Reducers
 reducer_mean <- ee$Reducer$mean()
