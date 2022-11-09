@@ -40,7 +40,7 @@ First time
 Sys.setenv(DOWNLOAD_STATIC_LIBV8 = 1)
 renv::restore()
 rgee::ee_Authenticate()
-rgee::ee_Initialize()
+rgee::ee_Initialize(drive = TRUE)
 ```
 
 ## System dependencies
