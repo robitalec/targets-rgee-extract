@@ -108,8 +108,9 @@ targets_image_points <- c(
 		sample_image_collection_with_points,
 		ee_extract(
 			get_ee_image_collection(landsat_8_asset_id) |>
-				filter_date('2018-09-01', '2018-11-01') |>
-				filter_bounds(points),
+				filter_date('2018-09-01', '2018-09-15') |>
+				filter_bounds(points) |>
+				select_bands_image_collection(c('SR_B1', 'SR_B2')),
 			points,
 			scale = landsat_8_scale,
 			fun = reducer_mean,
