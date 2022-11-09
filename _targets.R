@@ -22,10 +22,16 @@ elevation_scale <- 90
 tree_species_asset_id <- 'projects/sat-io/open-datasets/CA_FOREST/LEAD_TREE_SPECIES'
 tree_species_scale <- 30
 
-
 # Reducers
 reducer_mean <- ee$Reducer$mean()
 reducer_max <- ee$Reducer$max()
+
+# Via argument for ee_extract
+# either "getInfo" for extracting directly (note this can be limiting),
+# "drive" for extracting via Google Drive (requires googledrive package),
+# or "gcs" for extracting via Google Cloud Storage (requires googleCloudStorageR package)
+via <- 'getInfo'
+
 
 
 # Data --------------------------------------------------------------------
@@ -66,7 +72,8 @@ targets_image_polys <- c(
 			polygons,
 			scale = elevation_scale,
 			fun = reducer_max,
-			sf = TRUE
+			sf = TRUE,
+			via = via
 		)
 	)
 )
