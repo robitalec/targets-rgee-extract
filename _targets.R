@@ -107,7 +107,7 @@ targets_image_points <- c(
 	tar_target(
 		sample_image_collection_with_points,
 		ee_extract(
-			get_ee_image(landsat_8_asset_id) |>
+			get_ee_image_collection(landsat_8_asset_id) |>
 				filter_date('2018-09-01', '2018-11-01') |>
 				filter_bounds(points),
 			points,
