@@ -11,7 +11,7 @@ targets::tar_source('R')
 # Variables ---------------------------------------------------------------
 x_mid <- -73.7465
 y_mid <- 45.4693
-buffer_dist <- 1e5
+buffer_dist <- 0.1
 n_pts <- 100
 
 
