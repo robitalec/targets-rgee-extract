@@ -123,6 +123,27 @@ targets_image_points <- c(
 )
 
 
+
+# Targets: sample image collection with polygons --------------------------
+# For example, mean monthly water detection within polygons (2 = water, 1 = land)
+targets_image_collection_polygons <- c(
+	tar_target(
+		sample_image_collection_with_polygons,
+		ee_extract(
+			get_ee_image_collection(monthly_water_asset_id) |>
+				filter_date('2018-05-01', '2018-09-01') |>
+				filter_bounds(polygons) |>
+				select_bands_image_collection('water'),
+			polygons,
+			scale = monthly_water_scale,
+			fun = reducer_mean,
+			sf = TRUE
+		)
+	)
+)
+
+
+
 # Targets: all ------------------------------------------------------------
 # Automatically grab all the 'targets_*' lists above
 lapply(grep('targets', ls(), value = TRUE), get)
