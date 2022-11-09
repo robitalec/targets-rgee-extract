@@ -22,6 +22,12 @@ elevation_scale <- 90
 tree_species_asset_id <- 'projects/sat-io/open-datasets/CA_FOREST/LEAD_TREE_SPECIES'
 tree_species_scale <- 30
 
+landsat_8_asset_id <- 'LANDSAT/LC08/C02/T1_L2'
+landsat_8_scale <- 30
+
+monthly_water_asset_id <- 'JRC/GSW1_4/MonthlyHistory'
+monthly_water_scale <- 30
+
 # Reducers
 reducer_mean <- ee$Reducer$mean()
 reducer_max <- ee$Reducer$max()
@@ -90,6 +96,46 @@ targets_image_points <- c(
 			get_ee_image(tree_species_asset_id),
 			points,
 			scale = tree_species_scale,
+			fun = reducer_mean,
+			sf = TRUE
+		)
+	)
+)
+
+
+
+# Targets: sample image collection with points ----------------------------
+# For example, Landsat 8 bands at points
+targets_image_collection_points <- c(
+	tar_target(
+		sample_image_collection_with_points,
+		ee_extract(
+			get_ee_image_collection(landsat_8_asset_id) |>
+				filter_date('2018-09-01', '2018-09-15') |>
+				filter_bounds(points) |>
+				select_bands_image_collection(c('SR_B1', 'SR_B2')),
+			points,
+			scale = landsat_8_scale,
+			fun = reducer_mean,
+			sf = TRUE
+		)
+	)
+)
+
+
+
+# Targets: sample image collection with polygons --------------------------
+# For example, mean monthly water detection within polygons (2 = water, 1 = land)
+targets_image_collection_polygons <- c(
+	tar_target(
+		sample_image_collection_with_polygons,
+		ee_extract(
+			get_ee_image_collection(monthly_water_asset_id) |>
+				filter_date('2018-05-01', '2018-09-01') |>
+				filter_bounds(polygons) |>
+				select_bands_image_collection('water'),
+			polygons,
+			scale = monthly_water_scale,
 			fun = reducer_mean,
 			sf = TRUE
 		)
