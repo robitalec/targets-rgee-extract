@@ -21,6 +21,7 @@ elevation_scale <- 90
 
 # Reducers
 reducer_mean <- ee$Reducer$mean()
+reducer_max <- ee$Reducer$max()
 
 
 # Data --------------------------------------------------------------------
