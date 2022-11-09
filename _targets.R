@@ -25,6 +25,9 @@ tree_species_scale <- 30
 landsat_8_asset_id <- 'LANDSAT/LC08/C02/T1_L2'
 landsat_8_scale <- 30
 
+monthly_water_asset_id <- 'JRC/GSW1_4/MonthlyHistory'
+monthly_water_scale <- 30
+
 # Reducers
 reducer_mean <- ee$Reducer$mean()
 reducer_max <- ee$Reducer$max()
