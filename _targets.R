@@ -22,6 +22,9 @@ elevation_scale <- 90
 tree_species_asset_id <- 'projects/sat-io/open-datasets/CA_FOREST/LEAD_TREE_SPECIES'
 tree_species_scale <- 30
 
+landsat_8_asset_id <- 'LANDSAT/LC08/C02/T1_L2'
+landsat_8_scale <- 30
+
 # Reducers
 reducer_mean <- ee$Reducer$mean()
 reducer_max <- ee$Reducer$max()
