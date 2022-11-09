@@ -14,6 +14,20 @@ a
 ```
 
 
+### Sample image with polygons
+
+```{r}
+tar_read(sample_image_with_polys)
+```
+
+
+### Sample image with points
+
+### Sample image collections with polygons
+
+### Sample image collections with points
+
+
 ## Setup
 
 First time
