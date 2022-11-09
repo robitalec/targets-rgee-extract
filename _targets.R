@@ -16,8 +16,8 @@ n_pts <- 100
 n_polys <- 10
 
 # Images
-world_settlement_footprint_asset_id <- 'DLR/WSF/WSF2015/v1'
-world_settlement_footprint_scale <- 10
+elevation_asset_id <- 'CGIAR/SRTM90_V4'
+elevation_scale <- 90
 
 # Reducers
 reducer_mean <- ee$Reducer$mean()
