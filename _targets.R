@@ -106,7 +106,7 @@ targets_image_points <- c(
 
 # Targets: sample image collection with points ----------------------------
 # For example, Landsat 8 bands at points
-targets_image_points <- c(
+targets_image_collection_points <- c(
 	tar_target(
 		sample_image_collection_with_points,
 		ee_extract(
