@@ -6,6 +6,9 @@ output: github_document
 # targets-rgee-extract
 
 ```{r include=FALSE}
+library(targets)
+library(sf)
+
 a <- targets::tar_visnetwork(targets_only = TRUE)
 ```
 
@@ -14,45 +17,59 @@ a
 ```
 
 
-```{r}
-library(targets)
-```
 
 ### Sample image with polygons
 
+For example, extract the maximum elevation in each polygon ("elevation"):
+
 ```{r}
-tar_read(sample_image_with_polys)
+head(tar_read(sample_image_with_polys))
 ```
 
 
 ### Sample image with points
 
+For example, extract the leading tree species at each point ("b1"):
+
+```{r}
+head(tar_read(sample_image_with_points))
+```
+
+<!-- 
 ### Sample image collections with polygons
 
 ### Sample image collections with points
-
+-->
 
 ## Setup
 
-First time
+First time using this project:
 
 ```{r, eval = FALSE}
 Sys.setenv(DOWNLOAD_STATIC_LIBV8 = 1)
+install.packages('renv')
 renv::restore()
 rgee::ee_Authenticate()
 rgee::ee_Initialize(drive = TRUE)
 ```
 
-## System dependencies
+### Dependencies
 
-- gcloud
+Details for `rgee` here: https://r-spatial.github.io/rgee/articles/rgee01.html#installation
 
-### `rgee` 
+#### System dependencies
 
-Install:
-
-- `rgee` (https://r-spatial.github.io/rgee/articles/rgee01.html#installation)
 - gcloud (https://cloud.google.com/sdk/docs/install)
+- python >= 3.5
+- earthengine python package
+
+
+#### `rgee` 
+
+The "first time" section above should get you set up, but if you are starting from scratch: 
+
+
+**Install**:
 
 ```{r, eval = FALSE}
 library(rgee)
@@ -60,14 +77,14 @@ ee_install(py_env = 'rgee')
 ```
 
 
-Authenticate:
+**Authenticate**:
 
 ```{r, eval = FALSE}
 ee_Initialize()
 ```
 
 
-Check:
+**Check**:
 
 ```{r, eval = FALSE}
 ee_check()
