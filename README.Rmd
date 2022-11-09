@@ -33,8 +33,10 @@ tar_read(sample_image_with_polys)
 First time
 
 ```{r, eval = FALSE}
+Sys.setenv(DOWNLOAD_STATIC_LIBV8 = 1)
 renv::restore()
 rgee::ee_Authenticate()
+rgee::ee_Initialize()
 ```
 
 ## System dependencies
