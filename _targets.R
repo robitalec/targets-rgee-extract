@@ -45,7 +45,11 @@ points_csv_sf <- st_as_sf(points_csv, coords = c('X', 'Y'))
 targets_setup <- c(
 	tar_target(
 		points,
-		get_example_features(x_mid, y_mid, 'polygons', buffer_dist, n_pts)
+		get_example_features(x_mid, y_mid, 'points', buffer_dist, n_pts)
+	),
+	tar_target(
+		polygons,
+		get_example_features(x_mid, y_mid, 'polygons', buffer_dist, n_polys)
 	)
 )
 
