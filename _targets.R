@@ -44,7 +44,7 @@ points_csv_sf <- st_as_sf(points_csv, coords = c('X', 'Y'))
 targets_setup <- c(
 	tar_target(
 		points,
-		get_example_points(x_mid, y_mid, buffer_dist, n_pts)
+		get_example_features(x_mid, y_mid, 'polygons', buffer_dist, n_pts)
 	)
 )
 
@@ -62,6 +62,7 @@ targets_extract <- c(
 			sf = TRUE
 		)
 	)
+	# table(extract_world_settlement_footprint$settlement, useNA = 'always')
 
 	# TODO: map over images in a collection
 )
