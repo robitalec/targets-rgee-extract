@@ -13,7 +13,7 @@ x_mid <- -73.7465
 y_mid <- 45.4693
 buffer_dist <- 0.1
 n_pts <- 100
-
+n_polys <- 10
 
 # Images
 world_settlement_footprint_asset_id <- 'DLR/WSF/WSF2015/v1'
