@@ -8,12 +8,30 @@ targets::tar_source('R')
 
 
 
-
 # Variables ---------------------------------------------------------------
-x_mid <- -68.3559
-y_mid <- 49.4672
-buffer_dist <- 1e5
+x_mid <- -74.7465
+y_mid <- 46.4693
+buffer_dist <- 0.1
 n_pts <- 100
+n_polys <- 10
+
+# Images
+elevation_asset_id <- 'CGIAR/SRTM90_V4'
+elevation_scale <- 90
+
+tree_species_asset_id <- 'projects/sat-io/open-datasets/CA_FOREST/LEAD_TREE_SPECIES'
+tree_species_scale <- 30
+
+# Reducers
+reducer_mean <- ee$Reducer$mean()
+reducer_max <- ee$Reducer$max()
+
+# Via argument for ee_extract
+# either "getInfo" for extracting directly (note this can be limiting),
+# "drive" for extracting via Google Drive (requires googledrive package),
+# or "gcs" for extracting via Google Cloud Storage (requires googleCloudStorageR package)
+via <- 'getInfo'
+
 
 
 # Data --------------------------------------------------------------------
@@ -30,38 +48,56 @@ points_csv_sf <- st_as_sf(points_csv, coords = c('X', 'Y'))
 
 
 
-# Images
-world_settlement_footprint_asset_id <- 'DLR/WSF/WSF2015/v1'
-
-
-
 # Targets: setup ----------------------------------------------------------
 targets_setup <- c(
 	tar_target(
 		points,
-		get_example_points(x_mid, y_mid, buffer_dist, n_pts)
-	)
-)
-
-
-
-
-# Targets: images ---------------------------------------------------------
-targets_images <- c(
+		get_example_features(x_mid, y_mid, 'points', buffer_dist, n_pts)
+	),
 	tar_target(
-		world_settlement_footprint,
-		get_ee_image(world_settlement_footprint_asset_id)
+		polygons,
+		get_example_features(x_mid, y_mid, 'polygons', buffer_dist, n_polys)
+	)
+)
+
+
+
+# Targets: sample image with polygons -------------------------------------
+# For example, maximum elevation within polygons
+targets_image_polys <- c(
+	tar_target(
+		sample_image_with_polys,
+		ee_extract(
+			get_ee_image(elevation_asset_id),
+			polygons,
+			scale = elevation_scale,
+			fun = reducer_max,
+			sf = TRUE,
+			via = via
+		)
 	)
 )
 
 
 
 
+# Targets: sample image with points ---------------------------------------
+# For example, leading tree species at points
+targets_image_points <- c(
+	tar_target(
+		sample_image_with_points,
+		ee_extract(
+			get_ee_image(tree_species_asset_id),
+			points,
+			scale = tree_species_scale,
+			fun = reducer_mean,
+			sf = TRUE
+		)
+	)
+)
 
 
 
 # Targets: all ------------------------------------------------------------
 # Automatically grab all the 'targets_*' lists above
 lapply(grep('targets', ls(), value = TRUE), get)
-
-
