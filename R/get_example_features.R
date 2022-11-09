@@ -4,15 +4,20 @@
 #' @param type either 'points', or 'polygons'
 #' @author Alec L. Robitaille
 #' @export
-get_example_features <- function(x, y, type = 'points', diameter, n_features) {
+get_example_features <- function(x, y, type = 'points', region_size, n_features) {
 	xy_pt <- st_point(c(x, y))
-	xy_buff <- st_buffer(xy_pt, buffer_size)
+	xy_buff <- st_buffer(xy_pt, region_size)
 
 	xy_sample <- st_sample(xy_buff, n_pts)
-	out <- data.frame(id = seq.int(n_pts))
-	out$geometry <- xy_sample
+	xy <- data.frame(id = seq.int(n_pts))
+	xy$geometry <- xy_sample
 
-	out_point <- st_as_sf(out, crs = 4326)
+	out_point <- st_as_sf(xy, crs = 4326)
 
-	return()
+	if (type == 'polygons') {
+		out_poly <- st_buffer(out_point, region_size * 0.1)
+		return(out_poly)
+	} else {
+		return(out_point)
+	}
 }
