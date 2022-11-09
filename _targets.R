@@ -38,9 +38,6 @@ points_csv_sf <- st_as_sf(points_csv, coords = c('X', 'Y'))
 
 
 
-
-
-
 # Targets: setup ----------------------------------------------------------
 targets_setup <- c(
 	tar_target(
@@ -55,21 +52,19 @@ targets_setup <- c(
 
 
 
-# Targets: extract --------------------------------------------------------
-targets_extract <- c(
+# Targets: sample image with polygons -------------------------------------
+# For example, maximum elevation within polygons
+targets_image_points <- c(
 	tar_target(
-		extract_world_settlement_footprint,
+		sample_image_with_polys,
 		ee_extract(
-			get_ee_image(world_settlement_footprint_asset_id),
-			points,
-			scale = world_settlement_footprint_scale,
-			fun = reducer_mean,
+			get_ee_image(elevation_asset_id),
+			polygons,
+			scale = elevation_scale,
+			fun = reducer_max,
 			sf = TRUE
 		)
 	)
-	# table(extract_world_settlement_footprint$settlement, useNA = 'always')
-
-	# TODO: map over images in a collection
 )
 
 
