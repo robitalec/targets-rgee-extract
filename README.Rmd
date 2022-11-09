@@ -29,6 +29,7 @@ plot(sample_image_with_polys)
 ```
 
 
+
 ### Sample image with points
 
 For example, extract the leading tree species at each point ("b1"):
@@ -39,7 +40,10 @@ head(sample_image_with_points)
 plot(sample_image_with_points['b1'])
 ```
 
+
+
 ### Sample image collections with polygons
+
 For example, extract the monthly water detection within polygons (2 = water, 1 = land)
 
 ```{r}
@@ -48,7 +52,10 @@ head(sample_image_collection_with_polygons)
 plot(sample_image_collection_with_polygons)
 ```
 
+
+
 ### Sample image collections with points
+
 For example, Landsat 8 bands at each point: 
 
 ```{r}
@@ -59,6 +66,8 @@ plot(sample_image_collection_with_points)
 
 Note - these are spread wide, where each measure is a new column. That
 means they will likely need to be restructured for further processing. 
+
+
 
 ## Setup
 
@@ -72,15 +81,20 @@ rgee::ee_Authenticate()
 rgee::ee_Initialize(drive = TRUE)
 ```
 
+
+
 ### Dependencies
 
 Details for `rgee` here: https://r-spatial.github.io/rgee/articles/rgee01.html#installation
+
+
 
 #### System dependencies
 
 - gcloud (https://cloud.google.com/sdk/docs/install)
 - python >= 3.5
 - earthengine python package
+
 
 
 #### `rgee` 
