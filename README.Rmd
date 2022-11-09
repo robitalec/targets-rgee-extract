@@ -14,6 +14,10 @@ a
 ```
 
 
+```{r}
+library(targets)
+```
+
 ### Sample image with polygons
 
 ```{r}
