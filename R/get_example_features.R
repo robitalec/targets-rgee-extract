@@ -1,6 +1,6 @@
 #' Get example features
 #' @return
-#' @param diameter size of example study region's (circle) diameter
+#' @param region_size size of example study region's (in this case, a circle's diameter in meters)
 #' @param type either 'points', or 'polygons'
 #' @author Alec L. Robitaille
 #' @export
