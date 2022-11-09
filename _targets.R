@@ -98,6 +98,23 @@ targets_image_points <- c(
 
 
 
+# Targets: sample image collection with points ----------------------------
+# For example, Landsat 8 bands at points
+targets_image_points <- c(
+	tar_target(
+		sample_image_collection_with_points,
+		ee_extract(
+			get_ee_image(landsat_8_asset_id) |>
+				filter_date('2018-09-01', '2018-11-01'),
+			points,
+			scale = landsat_8_scale,
+			fun = reducer_mean,
+			sf = TRUE
+		)
+	)
+)
+
+
 # Targets: all ------------------------------------------------------------
 # Automatically grab all the 'targets_*' lists above
 lapply(grep('targets', ls(), value = TRUE), get)
