@@ -19,6 +19,10 @@ n_polys <- 10
 elevation_asset_id <- 'CGIAR/SRTM90_V4'
 elevation_scale <- 90
 
+tree_species_asset_id <- 'projects/sat-io/open-datasets/CA_FOREST/LEAD_TREE_SPECIES'
+tree_species_scale <- 30
+
+
 # Reducers
 reducer_mean <- ee$Reducer$mean()
 reducer_max <- ee$Reducer$max()
@@ -54,7 +58,7 @@ targets_setup <- c(
 
 # Targets: sample image with polygons -------------------------------------
 # For example, maximum elevation within polygons
-targets_image_points <- c(
+targets_image_polys <- c(
 	tar_target(
 		sample_image_with_polys,
 		ee_extract(
@@ -62,6 +66,24 @@ targets_image_points <- c(
 			polygons,
 			scale = elevation_scale,
 			fun = reducer_max,
+			sf = TRUE
+		)
+	)
+)
+
+
+
+
+# Targets: sample image with points ---------------------------------------
+# For example, leading tree species at points
+targets_image_points <- c(
+	tar_target(
+		sample_image_with_points,
+		ee_extract(
+			get_ee_image(tree_species_asset_id),
+			points,
+			scale = tree_species_scale,
+			fun = reducer_mean,
 			sf = TRUE
 		)
 	)
