@@ -39,7 +39,9 @@ vignettes/*.pdf
 .Renviron
 
 # renv
-renv/
+renv/staging
+renv/sandbox
+renv/library
 
 # targets
 _targets/
