@@ -6,16 +6,13 @@ output: github_document
 # targets-rgee-extract
 
 ```{r include=FALSE}
+knitr::opts_knit$set(
+	fig.path = 'man/figures'
+)
+
 library(targets)
 library(sf)
-
-a <- targets::tar_visnetwork(targets_only = TRUE)
 ```
-
-```{r, echo = FALSE}
-a
-```
-
 
 
 ### Sample image with polygons
