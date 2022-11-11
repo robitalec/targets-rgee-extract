@@ -15,7 +15,27 @@ library(targets)
 library(sf)
 ```
 
+## Goal
 
+Learning Earth Engine (though I highly recommend it), can be a bit of overhead
+if you just need to, for example, sample a land cover product for a 
+collection of points. With that in mind, this project combining `targets` and
+rgee`, and a couple simple helper functions, hopes to simple operations
+with Earth Engine easier. We won't cover the anywhere near the full potential
+of Earth Engine, just things like sampling images or image collections with
+different types of features (for now). 
+
+Working with Earth Engine through the Python package (or through `rgee` which
+also goes through the Python package via `reticulate`) has one main challenge 
+compared to the JavaScript API for Earth Engine: setup. See below for steps that
+worked for me. You'll first need system dependencies, then some steps to install 
+packages and authenticate with Earth Engine. 
+
+Open an issue, submit a PR, or otherwise get in touch if you have any
+thoughts or would like to contribute. Thanks!
+
+
+## Outputs
 ### Sample image with polygons
 
 For example, extract the maximum elevation in each polygon ("elevation"):
