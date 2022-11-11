@@ -1,5 +1,42 @@
+targets-rgee-extract
+================
 
-# targets-rgee-extract
+-   <a href="#goal" id="toc-goal">Goal</a>
+-   <a href="#outputs" id="toc-outputs">Outputs</a>
+    -   <a href="#sample-image-with-polygons"
+        id="toc-sample-image-with-polygons">Sample image with polygons</a>
+    -   <a href="#sample-image-with-points"
+        id="toc-sample-image-with-points">Sample image with points</a>
+    -   <a href="#sample-image-collections-with-polygons"
+        id="toc-sample-image-collections-with-polygons">Sample image collections
+        with polygons</a>
+    -   <a href="#sample-image-collections-with-points"
+        id="toc-sample-image-collections-with-points">Sample image collections
+        with points</a>
+-   <a href="#setup" id="toc-setup">Setup</a>
+    -   <a href="#dependencies" id="toc-dependencies">Dependencies</a>
+
+## Goal
+
+Learning Earth Engine (though I highly recommend it), can be a bit of
+overhead if you just need to, for example, sample a land cover product
+for a collection of points. With that in mind, this project combining
+`targets` and rgee\`, and a couple simple helper functions, hopes to
+simple operations with Earth Engine easier. We won’t cover the anywhere
+near the full potential of Earth Engine, just things like sampling
+images or image collections with different types of features (for now).
+
+Working with Earth Engine through the Python package (or through `rgee`
+which also goes through the Python package via `reticulate`) has one
+main challenge compared to the JavaScript API for Earth Engine: setup.
+See below for steps that worked for me. You’ll first need system
+dependencies, then some steps to install packages and authenticate with
+Earth Engine.
+
+Open an issue, submit a PR, or otherwise get in touch if you have any
+thoughts or would like to contribute. Thanks!
+
+## Outputs
 
 ### Sample image with polygons
 
@@ -28,7 +65,7 @@ head(sample_image_with_polys)
 plot(sample_image_with_polys)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](man/figures/unnamed-chunk-2-1.png)<!-- -->
 
 ### Sample image with points
 
@@ -56,7 +93,7 @@ head(sample_image_with_points)
 plot(sample_image_with_points['b1'])
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](man/figures/unnamed-chunk-3-1.png)<!-- -->
 
 ### Sample image collections with polygons
 
@@ -92,7 +129,7 @@ head(sample_image_collection_with_polygons)
 plot(sample_image_collection_with_polygons)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](man/figures/unnamed-chunk-4-1.png)<!-- -->
 
 ### Sample image collections with points
 
@@ -141,7 +178,7 @@ head(sample_image_collection_with_points)
 plot(sample_image_collection_with_points)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](man/figures/unnamed-chunk-5-1.png)<!-- -->
 
 Note - these are spread wide, where each measure is a new column. That
 means they will likely need to be restructured for further processing.
