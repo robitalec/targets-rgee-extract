@@ -31,7 +31,8 @@ jobs:
       - name: Install Linux system dependencies
         if: runner.os == 'Linux'
         run: |
-          sudo apt-get install igraph
+          sudo apt-get install lixml2
+          sudo apt-get install lixml2-dev
 
       - uses: r-lib/actions/setup-renv@v2
 
