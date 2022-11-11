@@ -68,6 +68,13 @@ means they will likely need to be restructured for further processing.
 
 ## Setup
 
+System dependencies:
+
+- gcloud (https://cloud.google.com/sdk/docs/install)
+- python >= 3.5
+- earthengine python package
+
+
 First time using this project:
 
 ```{r, eval = FALSE}
@@ -82,15 +89,9 @@ rgee::ee_Initialize(drive = TRUE)
 
 ### Dependencies
 
+System dependencies above. 
+
 Details for `rgee` here: https://r-spatial.github.io/rgee/articles/rgee01.html#installation
-
-
-
-#### System dependencies
-
-- gcloud (https://cloud.google.com/sdk/docs/install)
-- python >= 3.5
-- earthengine python package
 
 
 

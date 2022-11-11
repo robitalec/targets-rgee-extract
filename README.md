@@ -1,8 +1,6 @@
 
 # targets-rgee-extract
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
-
 ### Sample image with polygons
 
 For example, extract the maximum elevation in each polygon
@@ -30,7 +28,7 @@ head(sample_image_with_polys)
 plot(sample_image_with_polys)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ### Sample image with points
 
@@ -58,7 +56,7 @@ head(sample_image_with_points)
 plot(sample_image_with_points['b1'])
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ### Sample image collections with polygons
 
@@ -94,7 +92,7 @@ head(sample_image_collection_with_polygons)
 plot(sample_image_collection_with_polygons)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ### Sample image collections with points
 
@@ -143,12 +141,18 @@ head(sample_image_collection_with_points)
 plot(sample_image_collection_with_points)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 Note - these are spread wide, where each measure is a new column. That
 means they will likely need to be restructured for further processing.
 
 ## Setup
+
+System dependencies:
+
+-   gcloud (<https://cloud.google.com/sdk/docs/install>)
+-   python \>= 3.5
+-   earthengine python package
 
 First time using this project:
 
@@ -162,14 +166,10 @@ rgee::ee_Initialize(drive = TRUE)
 
 ### Dependencies
 
+System dependencies above.
+
 Details for `rgee` here:
 <https://r-spatial.github.io/rgee/articles/rgee01.html#installation>
-
-#### System dependencies
-
--   gcloud (<https://cloud.google.com/sdk/docs/install>)
--   python \>= 3.5
--   earthengine python package
 
 #### `rgee`
 
