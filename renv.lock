@@ -854,6 +854,18 @@
       "Hash": "a109c461586a605e31f6c4dba801db51",
       "Requirements": []
     },
+    "targets.rgee.extract": {
+      "Package": "targets.rgee.extract",
+      "Version": "0.0.1.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "robitalec",
+      "RemoteRepo": "targets-rgee-extract",
+      "RemoteRef": "docs/site",
+      "RemoteSha": "314e568f6d9a0f1d410ac699b902c0305889d708",
+      "Requirements": []
+    },
     "terra": {
       "Package": "terra",
       "Version": "1.6-3",
