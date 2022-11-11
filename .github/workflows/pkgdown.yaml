@@ -34,6 +34,7 @@ jobs:
           sudo apt-get install libxml2
           sudo apt-get install libxml2-dev
           sudo apt-get install libglpk-dev
+          sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev
 
       - uses: r-lib/actions/setup-renv@v2
 
