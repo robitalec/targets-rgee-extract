@@ -1,5 +1,5 @@
 #' Select bands from  image collection
-#' @return
+#' @return ee.Image.Collection() with bands selected
 #' @author Alec L. Robitaille
 #' @export
 select_bands_image_collection <- function(image_collection, band_names) {

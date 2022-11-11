@@ -1,5 +1,5 @@
 #' Filter image collection within start and end date
-#' @return
+#' @return filtered ee.Image.Collection()
 #' @author Alec L. Robitaille
 #' @export
 filter_date <- function(image_collection, start_date, end_date) {

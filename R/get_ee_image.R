@@ -1,5 +1,5 @@
 #' Get EE image
-#' @return
+#' @return ee.Image()
 #' @author Alec L. Robitaille
 #' @export
 get_ee_image <- function(asset_id) {
