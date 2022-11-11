@@ -3,3 +3,5 @@
 ^requirements\.txt$
 ^\.github$
 ^LICENSE\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
