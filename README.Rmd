@@ -6,11 +6,9 @@ output:
 ---
 
 
-# targets-rgee-extract
-
 ```{r include=FALSE}
-knitr::opts_knit$set(
-	fig.path = 'man/figures'
+knitr::opts_chunk$set(
+	fig.path = "man/figures/"
 )
 
 library(targets)
