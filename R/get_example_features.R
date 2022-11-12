@@ -15,7 +15,8 @@ get_example_features <- function(x, y, type = 'points', region_size, n_features)
 	out_point <- st_as_sf(xy, crs = 4326)
 
 	if (type == 'polygons') {
-		out_poly <- st_buffer(out_point, 500)
+		grd <- st_make_grid(out_point)
+		out_poly <- grd[st_sample(st_make_grid(out_point), n_features)]
 		return(out_poly)
 	} else {
 		return(out_point)
