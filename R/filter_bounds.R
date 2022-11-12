@@ -1,5 +1,5 @@
 #' Filter image collection using bounds of a provided region (feature)
-#' @return
+#' @return filtered ee.Image.Collection()
 #' @author Alec L. Robitaille
 #' @export
 filter_bounds <- function(image_collection, region) {
