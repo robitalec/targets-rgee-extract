@@ -144,6 +144,18 @@ targets_image_collection_polygons <- c(
 
 
 
+
+# Targets: README ---------------------------------------------------------
+targets_readme <- c(
+	tar_render(
+		render_readme,
+		'README.Rmd'
+	)
+)
+
+
+
+
 # Targets: all ------------------------------------------------------------
 # Automatically grab all the 'targets_*' lists above
 lapply(grep('targets', ls(), value = TRUE), get)
