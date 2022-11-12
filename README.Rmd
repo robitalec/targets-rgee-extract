@@ -2,7 +2,7 @@
 title: 'targets-rgee-extract'
 output: 
   github_document:
-    toc: TRUE
+    toc: true
 ---
 
 
