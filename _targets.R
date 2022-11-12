@@ -150,6 +150,10 @@ targets_readme <- c(
 	tar_render(
 		render_readme,
 		'README.Rmd'
+	),
+	tar_target(
+		rm_html,
+		{render_readme; file.remove('README.html')}
 	)
 )
 
