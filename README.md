@@ -2,6 +2,7 @@ targets-rgee-extract
 ================
 
 -   <a href="#goal" id="toc-goal">Goal</a>
+-   <a href="#neat-data-sets" id="toc-neat-data-sets">Neat data sets</a>
 -   <a href="#outputs" id="toc-outputs">Outputs</a>
     -   <a href="#sample-image-with-polygons"
         id="toc-sample-image-with-polygons">Sample image with polygons</a>
@@ -20,11 +21,15 @@ targets-rgee-extract
 
 Learning Earth Engine (though I highly recommend it), can be a bit of
 overhead if you just need to, for example, sample a land cover product
-for a collection of points. With that in mind, this project combining
-`targets` and rgee\`, and a couple simple helper functions, hopes to
-simple operations with Earth Engine easier. We won’t cover the anywhere
-near the full potential of Earth Engine, just things like sampling
-images or image collections with different types of features (for now).
+for a collection of points. Great packages like `sf` and `terra` exist
+in the R ecosystem for sampling from rasters, but Earth Engine (and its
+community of users) offers an incredible resource of data sets (see
+below), accessible without downloading any large files to your local
+machine. With that in mind, this project combining `targets` and rgee\`,
+and a couple simple helper functions, hopes to simple operations with
+Earth Engine easier. We won’t cover the anywhere near the full potential
+of Earth Engine, just things like sampling images or image collections
+with different types of features (for now).
 
 Working with Earth Engine through the Python package (or through `rgee`
 which also goes through the Python package via `reticulate`) has one
@@ -35,6 +40,13 @@ Earth Engine.
 
 Open an issue, submit a PR, or otherwise get in touch if you have any
 thoughts or would like to contribute. Thanks!
+
+## Neat data sets
+
+TODO
+
+-   <https://developers.google.com/earth-engine/datasets/>
+-   <https://samapriya.github.io/awesome-gee-community-datasets/>
 
 ## Outputs
 
