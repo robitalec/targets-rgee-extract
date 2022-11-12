@@ -133,7 +133,7 @@ Details for `rgee` here: https://r-spatial.github.io/rgee/articles/rgee01.html#i
 The "first time" section above should get you set up, but if you are starting from scratch: 
 
 
-**Install**:
+Install:
 
 ```{r, eval = FALSE}
 library(rgee)
@@ -141,14 +141,14 @@ ee_install(py_env = 'rgee')
 ```
 
 
-**Authenticate**:
+Authenticate:
 
 ```{r, eval = FALSE}
 ee_Initialize()
 ```
 
 
-**Check**:
+Check:
 
 ```{r, eval = FALSE}
 ee_check()

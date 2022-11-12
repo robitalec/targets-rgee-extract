@@ -225,20 +225,20 @@ Details for `rgee` here:
 The “first time” section above should get you set up, but if you are
 starting from scratch:
 
-**Install**:
+Install:
 
 ``` r
 library(rgee)
 ee_install(py_env = 'rgee')
 ```
 
-**Authenticate**:
+Authenticate:
 
 ``` r
 ee_Initialize()
 ```
 
-**Check**:
+Check:
 
 ``` r
 ee_check()
