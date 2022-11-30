@@ -1,21 +1,22 @@
 targets-rgee-extract
 ================
 
--   <a href="#goal" id="toc-goal">Goal</a>
--   <a href="#neat-data-sets" id="toc-neat-data-sets">Neat data sets</a>
--   <a href="#outputs" id="toc-outputs">Outputs</a>
-    -   <a href="#sample-image-with-polygons"
-        id="toc-sample-image-with-polygons">Sample image with polygons</a>
-    -   <a href="#sample-image-with-points"
-        id="toc-sample-image-with-points">Sample image with points</a>
-    -   <a href="#sample-image-collections-with-polygons"
-        id="toc-sample-image-collections-with-polygons">Sample image collections
-        with polygons</a>
-    -   <a href="#sample-image-collections-with-points"
-        id="toc-sample-image-collections-with-points">Sample image collections
-        with points</a>
--   <a href="#setup" id="toc-setup">Setup</a>
-    -   <a href="#dependencies" id="toc-dependencies">Dependencies</a>
+- <a href="#goal" id="toc-goal">Goal</a>
+- <a href="#neat-data-sets" id="toc-neat-data-sets">Neat data sets</a>
+- <a href="#outputs" id="toc-outputs">Outputs</a>
+  - <a href="#sample-image-with-polygons"
+    id="toc-sample-image-with-polygons">Sample image with polygons</a>
+  - <a href="#sample-image-with-points"
+    id="toc-sample-image-with-points">Sample image with points</a>
+  - <a href="#sample-image-collections-with-polygons"
+    id="toc-sample-image-collections-with-polygons">Sample image collections
+    with polygons</a>
+  - <a href="#sample-image-collections-with-points"
+    id="toc-sample-image-collections-with-points">Sample image collections
+    with points</a>
+- <a href="#setup" id="toc-setup">Setup</a>
+  - <a href="#dependencies" id="toc-dependencies">Dependencies</a>
+- <a href="#resources" id="toc-resources">Resources</a>
 
 ## Goal
 
@@ -45,8 +46,8 @@ thoughts or would like to contribute. Thanks!
 
 TODO
 
--   <https://developers.google.com/earth-engine/datasets/>
--   <https://samapriya.github.io/awesome-gee-community-datasets/>
+- <https://developers.google.com/earth-engine/datasets/>
+- <https://samapriya.github.io/awesome-gee-community-datasets/>
 
 ## Outputs
 
@@ -199,9 +200,9 @@ means they will likely need to be restructured for further processing.
 
 System dependencies:
 
--   gcloud (<https://cloud.google.com/sdk/docs/install>)
--   python \>= 3.5
--   earthengine python package
+- gcloud (<https://cloud.google.com/sdk/docs/install>)
+- python \>= 3.5
+- earthengine python package
 
 First time using this project:
 
@@ -250,3 +251,8 @@ Renv + python:
 renv::use_python(reticulate::py_discover_config()$python)
 renv::snapshot()
 ```
+
+## Resources
+
+- `rgee`
+  - <https://csaybar.github.io/rgee-examples/>

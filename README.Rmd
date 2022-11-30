@@ -162,3 +162,9 @@ Renv + python:
 renv::use_python(reticulate::py_discover_config()$python)
 renv::snapshot()
 ```
+
+
+## Resources
+
+- `rgee`
+	- https://csaybar.github.io/rgee-examples/
