@@ -60,6 +60,7 @@
 </h1></div>
 <ul>
 <li><a href="#goal" id="toc-goal">Goal</a></li>
+<li><a href="#usage" id="toc-usage">Usage</a></li>
 <li><a href="#neat-data-sets" id="toc-neat-data-sets">Neat data sets</a></li>
 <li>
 <a href="#outputs" id="toc-outputs">Outputs</a>
@@ -84,6 +85,13 @@
 <p>Learning Earth Engine (though I highly recommend it), can be a bit of overhead if you just need to, for example, sample a land cover product for a collection of points. Great packages like <code>sf</code> and <code>terra</code> exist in the R ecosystem for sampling from rasters, but Earth Engine (and its user community) offers an incredible resource of data sets (see below) that can be accessed without downloading any large files to your local machine. With that in mind, this project combines <code>targets</code> and <code>rgee</code> with a couple simple helper functions, to make simple operations with Earth Engine easier. We won’t cover anywhere near the full potential of Earth Engine, just things like sampling images or image collections with different types of features (for now).</p>
 <p>Working with Earth Engine through the Python package (or through <code>rgee</code> which also goes through the Python package via <code>reticulate</code>) has one main challenge compared to the JavaScript API for Earth Engine: setup. See below for steps that worked for me. You’ll first need to install system dependencies, then install some R packages and authenticate with Earth Engine. <code>renv</code> is used to track required R and Python packages.</p>
 <p>Open an issue, submit a PR, or otherwise get in touch if you have any thoughts or would like to contribute. Thanks!</p>
+</div>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
+<p>This repository is a <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template" class="external-link">template repository</a>, so you can select “Use this template” to start a new project quickly with the setup and example targets workflow.</p>
+<p><img src="https://docs.github.com/assets/cb-100333/images/help/repository/use-this-template-button.png"></p>
+<p>Then see the <a href="#setup">Setup</a> section below for installing system and R dependencies.</p>
 </div>
 <div class="section level2">
 <h2 id="neat-data-sets">Neat data sets<a class="anchor" aria-label="anchor" href="#neat-data-sets"></a>
