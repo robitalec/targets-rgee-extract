@@ -2,6 +2,7 @@ targets-rgee-extract
 ================
 
 - <a href="#goal" id="toc-goal">Goal</a>
+- <a href="#usage" id="toc-usage">Usage</a>
 - <a href="#neat-data-sets" id="toc-neat-data-sets">Neat data sets</a>
 - <a href="#outputs" id="toc-outputs">Outputs</a>
   - <a href="#sample-image-with-polygons"
@@ -41,6 +42,18 @@ Earth Engine. `renv` is used to track required R and Python packages.
 
 Open an issue, submit a PR, or otherwise get in touch if you have any
 thoughts or would like to contribute. Thanks!
+
+## Usage
+
+This repository is a [template
+repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template),
+so you can select “Use this template” to start a new project quickly
+with the setup and example targets workflow.
+
+![](https://docs.github.com/assets/cb-100333/images/help/repository/use-this-template-button.png)
+
+Then see the [Setup](#setup) section below for installing system and R
+dependencies.
 
 ## Neat data sets
 
