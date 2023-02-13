@@ -13,6 +13,7 @@ google-crc32c==1.5.0
 google-resumable-media==2.4.0
 googleapis-common-protos==1.56.4
 httplib2==0.21.0
+httplib2shim==0.0.3
 idna==3.4
 numpy==1.23.4
 protobuf==4.21.9
