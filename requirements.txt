@@ -2,7 +2,7 @@ cachetools==5.2.0
 certifi==2022.12.7
 charset-normalizer==2.1.1
 earthengine-api==0.1.330
-future==0.18.2
+future==0.18.3
 google-api-core==2.10.2
 google-api-python-client==1.12.11
 google-auth==2.14.1
