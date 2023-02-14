@@ -1,6 +1,6 @@
 Package: targets.rgee.extract
 Title: Targets Workflow for Extracting With Earth Engine
-Version: 0.0.1.9000
+Version: 0.0.2
 Authors@R: 
     person(given = "Alec L.",
            family = "Robitaille",
