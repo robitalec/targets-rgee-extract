@@ -97,7 +97,8 @@ targets_image_points <- c(
 			points,
 			scale = tree_species_scale,
 			fun = reducer_mean,
-			sf = TRUE
+			sf = TRUE,
+			via = via
 		)
 	)
 )
@@ -117,7 +118,8 @@ targets_image_collection_points <- c(
 			points,
 			scale = landsat_8_scale,
 			fun = reducer_mean,
-			sf = TRUE
+			sf = TRUE,
+			via = via
 		)
 	)
 )
@@ -137,7 +139,8 @@ targets_image_collection_polygons <- c(
 			polygons,
 			scale = monthly_water_scale,
 			fun = reducer_mean,
-			sf = TRUE
+			sf = TRUE,
+			via = via
 		)
 	)
 )
